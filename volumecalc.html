@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<form id=inputDevice>
+
+	Radius: <input type="number" id="radius">
+    	<br>
+    Height: <input type="number" id="height">
+    	<br>
+       		<input type="button" onClick="numberCrunch()" value="Go!">
+    
+</form>
+
+<div id="display">
+
+</div>
+
+<script>
+
+	function numberCrunch(){
+
+        document.getElementById("display").innerHTML = "";
+    	
+        var radius = document.getElementById("radius").value;
+        var height = document.getElementById("height").value;
+        
+        var display = document.getElementById("display");
+        
+        
+        var volume = 1/3 * Math.PI * Math.pow(radius,2) * height;
+        var v = volume.toFixed(2);
+        
+        display.innerHTML += "The volume of the cone is " + v + " cm cubed."
+    }
+
+</script>
+
+</body>
+
+</html>
